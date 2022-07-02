@@ -59,7 +59,7 @@
     let empwage=totalemphrs*WAGE_PER_HOUR;
     console.log("Total emp hours: "+totalemphrs + "Emp wage: "+empwage);
 }
-//UC5 while loop
+
 //UC6 Arrays
 function calcDailyWage(emphrs){
     return emphrs*WAGE_PER_HOUR;
