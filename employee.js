@@ -121,4 +121,16 @@ function findFullTimeWage(dailywage){
     return dailywage.includes("160");
 }
 console.log("UC 7D-First time full time wage was earned on Day: "+mapDayWithWageArr.find(findFullTimeWage));
+
+//UC 7E-Check if every element of full time wage is truely holding full time wage
+function isAllFulltimeWage(dailywage){
+    return dailywage.includes("160");
+}
+console.log("UC 7E-Checkall elements have full time wage: "+fullDayWageArr.every(isAllFulltimeWage));
+
+//UC 7F- Check if there is any part time wage
+function isAnyPartTimeWage(dailywage){
+    return dailywage.includes("80");
+}
+console.log("UC 7F check if there is any part time wage: "+mapDayWithWageArr.some(isAnyPartTimeWage));
 }
