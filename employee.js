@@ -57,7 +57,7 @@
         totalemphrs += getWorkingHours(emp_check);
     }
     let empwage=totalemphrs*WAGE_PER_HOUR;
-    console.log("Total emp hours: "+totalemphrs + "Emp wage: "+empwage);
+    console.log("UC 4: Total emp hours: "+totalemphrs + "Emp wage: "+empwage);
 }
 
 //UC6 Arrays
@@ -80,11 +80,11 @@ function calcDailyWage(emphrs){
             empDailyWagearr.push(calcDailyWage(emphrs));
         }
         let empwage=calcDailyWage(totalemphrs);
-        console.log("Total Days: " + totalworkingdays + "Total hours: "+totalemphrs
+        console.log("UC 6: Total Days: " + totalworkingdays + "Total hours: "+totalemphrs
         + "Employee Wage" + empwage);
 
-//Array Helper Functions
-//UC7
+//Array
+//UC 7A
 let totempwage=0;
 function sum(dailywage){
     totempwage += dailywage;
@@ -96,5 +96,15 @@ console.log("Total Days: " + totalworkingdays + "Total hours: "+totalemphrs
 function totalWages(totalWage,dailywage){
     return totalWage+dailywage;
 }
-console.log("Emp wage with reduce: " + empDailyWagearr.reduce(totalWages,0));
+console.log("UC 7A:Emp wage with reduce: " + empDailyWagearr.reduce(totalWages,0));
+
+//UC 7B show the day along with daily wage using array map helper function
+let dailyCntr=0;
+function mapDayWithWage(dailywage){
+    dailyCntr++;
+    return dailyCntr + "=" + dailywage;
+}
+let mapDayWithWageArr = empDailyWagearr.map(mapDayWithWage);
+console.log("UC 7B-Daily wage Map");
+console.log(mapDayWithWageArr);
 }
